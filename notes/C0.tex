@@ -1,0 +1,279 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{braket}
+% dark mode
+\pagecolor[rgb]{0,0,0} 
+\color[rgb]{1,1,1}
+
+
+\usepackage[english]{babel}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% \usepackage{cmbright}
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{sansmathfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=red]{hyperref}
+
+\title{Nullum Nomen}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle
+
+
+This document marks Yue's note on some of the quantum transport concepts.
+
+\section{The $k \cdot p$ theory}
+
+Electrons in solids are described by single electron Schrodinger equation with potential $V$:
+\begin{equation}
+    H\psi=(\dfrac{p^2}{2m}+V)\psi=E\psi
+\end{equation}
+Bloch theorem states that, if $V$ is a spatially periodic potential obeying crystal symmetry, then $\psi$ should have the same symmetry defined as
+\begin{equation}
+    \psi_{n,k}(r)=\text{exp}(ikr)u_{n,k}(r)
+\end{equation}
+Note here $k,r$ are generally vectors, but working in 1D makes the problem easier.  Therefore, the Schrodinger equation becomes
+\begin{equation}
+    H\psi_{n,k}(x)=(\dfrac{p^2}{2m}+V)\text{exp}(ikx)u_{n,k}(x)
+\end{equation}
+Note that $p=-i\hbar \partial_x$,
+\begin{eqnarray*}
+  H \psi_{n, k} (x) & = & \left( \dfrac{p^2}{2 m} + e^{i k x} u_{n, k} (x)
+  \right) e^{i k x} u_{n, k} (x)\\
+  & = & \dfrac{p^2}{2 m} e^{i k x} u_{n, k} (x) + V e^{i k x} u_{n, k} (x)\\
+  & = & \dfrac{1}{2 m} (\hbar^2 k^2 e^{i k x} u_{n, k} (x) + 2 \hbar e^{i k
+  x} \textcolor{red}{k p} u_{n, k} (x) + e^{i k x} p^2 u_{n, k} (x)) + V e^{i k x} u_{n, k}
+  (x) =  E e^{i k x} u_{n, k} (x)\\
+  &  & 
+\end{eqnarray*}
+Getting rid of the phase, we have the equation as
+
+ \begin{equation}
+     \dfrac{1}{2 m} (\hbar^2 k^2 u_{n, k} (x) + 2 \hbar k p u_{n, k} (x) + p^2  u_{n, k} (x)) + V u_{n, k} (x) = E_{n, k} u_{n, k} (x) 
+ \end{equation}
+Define
+\begin{equation}
+    H_0=\dfrac{p^2}{2m}+V, H_1=\dfrac{\hbar^2k^2}{2m}+\dfrac{\hbar}{m}kp
+\end{equation}
+we then have $(H_0 + H_1) u_{n,k}(x) = Eu_{n,k}(x)$. Note that, at $k = 0$, $H_1=0$, so we only need to solve
+\begin{equation}
+    H_0 u_{n,0} = E_{n,0}u_{n,0}
+    \label{eq1}
+\end{equation}
+This is an easier equation to work with, since we know $u_{n,0}$ is periodic. Solving Equation \ref{eq1} gives a series of complete and orthonormal basis states, and we use $H_1$ to correct the solution by the tool of \textbf{perturbation theory}. This is called $k\cdot p$ method.
+
+
+As an example, assume the band structure has an extrunum at the energy $E_{n,0}$, the band is non-degenerate. Using perturbation theory, we have:
+\begin{equation}
+    u_{n, k} = u_{n, 0} + \dfrac{\hbar}{m} \underset{m \neq n}{\sum} \dfrac{< u_{n, 0} | k p | u_{m, 0} >}{E_{n, 0} - E_{m, 0}} u_{m, 0} 
+\end{equation}
+and the energy spectrum is given by
+
+\begin{equation}
+     E_{n, k} = E_{n, 0} + \dfrac{\hbar^2 k^2}{2 m} + \frac{\hbar^2}{m^2} \underset{m \neq n}{\sum} \dfrac{< u_{n, 0} | k p | u_{m, 0} >^2}{E_{n, 0} -   E_{m, 0}} 
+\end{equation}
+
+Note that the linear term vanishes, because $u_{n,0}$ is expected to be symmetric at $k=0$. $k\cdot p$ method provides a convenient way to compute the effective mass:
+\begin{equation}
+    \frac{1}{m^{\text{*}}} = \frac{1}{m} + \frac{2}{m^2 k^2} \underset{m \neq   n}{\sum} \frac{< u_{n, 0} | k p | u_{m, 0} >^2}{E_{n, 0} - E_{m, 0}} 
+\end{equation}
+
+\section{Tight binding method}
+
+Tight bonding method is a way to calculate band structure. Assume, for a single, isolate atom, the Hamiltonian is defined as $H_\text{at}$, which generates atomic orbitals $\varphi_m(r)$. Inside a crystal, one can assume the orbital is a linear mixture of atomic orbitals, as
+\begin{equation}
+    \psi_m (r) = \underset{R_n}{\sum} b_m (R_n) \varphi_m (r - R_n)
+\end{equation}
+Note that, due to lattice symmetry, moving the orbital by $R_n$ should only change by a factor of phase. That is, $\psi(r+R_n) = \text{exp}(ikR_n)\psi(r)$. This means
+\begin{equation}
+    \underset{R_n}{\sum} b_m (R_n) \varphi_m (r + R_l - R_n) = \text{exp} (i k R_l)\underset{R_n}{\sum} b_m (R_n) \varphi_m (r - R_n)
+\end{equation}
+Considering the orthonormality, we have $b_m (R_n - R_l) = \exp (i k R_l) b_m (R_n)$, or  $b_m ( R_l) = \exp (- i k R_l) b_m (0)$. Under this sense, the orbital is written as
+\begin{equation}
+    \psi_m (r) = b_m (0)\underset{R_n}{\sum} \exp (- i k R_n) \varphi_m(r-R_n)
+\end{equation}
+
+Ignoring all overlapping in orbitals $\varphi(r-R_n)$, then 
+\begin{equation}
+    \psi_m (r) =\dfrac{1}{\sqrt{N}}\underset{R_n}{\sum} \exp (- i k R_n) \varphi_m(r-R_n)
+\end{equation}
+Therefore, one can directly compute the corresponding energy (only 1 band)
+\begin{eqnarray*}  \varepsilon_m (k) & = & \int \text{d} r \psi_m^{\ast} (r) H (r) \psi_m (r)\\  & = & \int \text{d} r \frac{1}{\sqrt{N}} \underset{R_l}{\sum} \exp (i k  R_l) \varphi_m^{\ast} (r - R_l) H (r) \times \frac{1}{\sqrt{N}}  \underset{R_n}{\sum} \exp (- i k R_n) \varphi_m (r - R_n)\\  & = & \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int \text{d} r  \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r - R_l) H (r) \varphi_m (r -  R_n)\\  & = & \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int \text{d} r  \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r - R_l) H (r - R_n) \varphi_m (r -  R_n)\\  & = & \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int \text{d} r  \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r + R_n - R_l)  (H_{\text{at}} (r)  + \Delta U) \varphi_m (r)\\  & = & \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int \text{d} r  \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r + R_n - R_l) H_{\text{at}} (r)  \varphi_m (r)\\  & + & \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int \text{d} r  \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r + R_n - R_l) \Delta U \varphi_m  (r)\\  & = & E_m + \frac{1}{N} \underset{R_l}{\sum} \underset{R_n}{\sum} \int  \text{d} r \exp (i k (R_l - R_n)) \varphi_m^{\ast} (r + R_n - R_l) \Delta U  \varphi_m (r)\\  & = & E_m + \int \text{d} r \varphi_m^{\ast} (r) \Delta U \varphi_m (r) +  \underset{R_n \neq 0}{\sum} \exp (- i k R_n) \int \text{d} r  \varphi_m^{\ast} (r - R_n) \Delta U \varphi_m (r)\\  & = & E_m - \alpha_m - \underset{R_n \neq 0}{\sum} \exp (- i k R_n) \gamma_{m  n}\end{eqnarray*}
+
+
+where we define matrix elements $\alpha_m=-\int \text{d} r \varphi_m^{\ast} (r) \Delta U \varphi_m (r)$, and $\gamma_{m  n} = -\int \text{d} r \varphi_m^{\ast} (r - R_n) \Delta U \varphi_m (r)$.
+Here, $\gamma$ defines the bond energy on different atom orbitals for two orbitals separated by $R_n$. In practice, tight bonding model assumes $\gamma_{mn}$ decays rapidly over $n$, for example, one common practice is let $\gamma_{mn}=0$ once $|n|>2$.
+
+\section{Second quantization of tight binding model}
+\subsection{The second quantization of single-particle operators}
+
+Assume a system with many particles, each residing on specific state $\ket{\lambda}$, $\lambda=1,2,...$, a convenient way to represent the system is group the particles by identifying the states.  This is to say, instead of counting each particle and sum over, we count how many particles are at state $\ket{i}$. This is the \textit{representation in Fock space}:
+\begin{equation}
+    \ket{\psi}=\ket{n_1,n_2,n_3,...}
+\end{equation}
+Fock space allows creating and annihilating a particle at state $\ket{\lambda}$ with creation operator $a^{\dag}_\lambda$ and $a_\lambda$. They satisfy commuting or anti-commuting relationships, and they define a particle number operator $n_\lambda = a^{\dag}_\lambda a_\lambda$. Importantly, for a group of particles, it is not physical to detect the observable of single particle, such as energy $E$ and momentum $p$. Instead, we detect the sum of all, acting on the $N$-particle states together. Say we have a single-particle observable $\hat{O}$. On the one hand, we know it is written as
+\begin{equation}
+    \hat{O} = \underset{i}{\sum}\hat{o}_i
+\end{equation}
+where $i$ is the index of particle. On the other hand, as we will see later, it can be written equivalently (under Fock space) as (assume $\ket{\alpha}$ is the complete eigenstates of $\hat{o}$)
+
+\begin{equation}
+    \hat{O} = \underset{\alpha \beta}{\sum} < \alpha | \hat{o} | \beta > a_{\alpha}^{\dag}a_{\beta}
+\end{equation}
+The proof is as follows. Assume for the eigenstate $\ket{\alpha}$, the eigenvalue is $o_{\alpha}$ (note: no hat, so it is a value not an operator). Then the effect of $\hat{O}$ is, basically speaking, for each state $\ket{\alpha}$, count how many particles are there and add $o_{\alpha}$ to each of them. This is to say,
+\begin{equation}
+    \hat{O} = \underset{\alpha}{\sum} o_{\alpha} \hat{n}_{\alpha}
+\end{equation}
+Recall in quantum mechanics, the way we say two operators are the same is by checking each and every matrix element is the same. Look at one of the matrix elements, consisting of $\ket{\Psi}$ and $\ket{\Psi'}$:
+\begin{eqnarray*}  \braket{\Psi'| \hat{O} | \Psi} & = & < n'_1, n'_2, \dots | \hat{O} | n_1, n_2,  \dots >\\  & = & < n'_1, n'_2, \dots \left| \underset{\alpha}{\sum} o_{\alpha}  \hat{n}_{\alpha} \right| n_1, n_2, \dots >\\  & = & \underset{\alpha}{\sum} n_{\alpha} < n'_1, n'_2, \dots | o_{\alpha}  | n_1, n_2, \dots >\\  & = & \underset{\alpha}{\sum} n_{\alpha} o_{\alpha} < n'_1, n'_2, \dots |   n_1, n_2, \dots >\\  & = & \braket{\Psi'|\Psi} \underset{\alpha}{\sum} n_{\alpha}  o_{\alpha}\end{eqnarray*}
+
+and, if we use one-particle basis,
+
+\begin{eqnarray*}  \braket{\Psi'| \hat{O} | \Psi} & = & \int \text{d} {r \Psi'}^{\ast} (x_1, x_2,  \ldots, x_N) \hat{O} \Psi (x_1, x_2, \ldots, x_N)\\  & = & \int \text{d} {r \Psi'}^{\ast} (x_1, x_2, \ldots, x_N) \underset{i =  1}{\overset{N}{\sum}} \hat{o}_i \Psi (x_1, x_2, \ldots, x_N)\\  & = & \underset{\alpha}{\overset{}{\sum}} n_{\alpha} o_{\alpha} \int  \text{d} {r \Psi'}^{\ast} (x_1, x_2, \ldots, x_N) \Psi (x_1, x_2, \ldots,  x_N)\\  & = & \braket{\Psi'|\Psi} \underset{\alpha}{\sum} n_{\alpha}  o_{\alpha}\end{eqnarray*}
+
+We are not done yet! This is only true for orthonormal basis. Note that, for two different complete states $\ket{\alpha}$, $\ket{\beta}$,
+\begin{equation}
+    I = \underset{\alpha}{\sum} \ket{\alpha}\bra{\alpha} = \underset{\beta}{\sum} \ket{\beta}\bra{\beta} 
+\end{equation}
+Thus, we have $a_{\beta} = \underset{\alpha}{\sum} \braket{\beta|\alpha} a_{\alpha}$, and $a^{\dag}_{\beta} = \underset{\alpha}{\sum} \braket{\alpha|\beta} a^{\dag}_{\alpha}$ \textcolor{red}{(Warning! We take this as granted, but this relation is harder to prove than you think!)}, therefore,
+
+\begin{eqnarray*}  \hat{O} & = & \underset{\alpha}{\sum} o_{\alpha} \hat{n}_{\alpha} =  \underset{\alpha}{\sum} o_{\alpha} a_{\alpha}^{\dag} a_{\alpha}\\  & = & \underset{\alpha}{\sum} \underset{\beta}{\sum}  \underset{\beta'}{\sum} o_{\alpha} < \beta | \alpha > a_{\beta}^{\dag} <  \alpha | \beta' > a_{\beta'}\\  & = & \underset{\beta}{\sum} \underset{\beta'}{\sum} < \beta |   \left( \underset{\alpha}{\sum} o_{\alpha} | \alpha > o_{\alpha} < \alpha |  \right) |  \beta' > a_{\beta}^{\dag} a_{\beta'}\\  & = & \underset{\beta}{\sum} \underset{\beta'}{\sum} < \beta |   \hat{o} |  \beta' > a_{\beta}^{\dag} a_{\beta'}\end{eqnarray*}
+
+This is $\hat{O} = \underset{\alpha \beta}{\sum} < \alpha | \hat{o} | \beta > a_{\alpha}^{\dag}a_{\beta}$ (maybe a bit of notation abusing, here $\ket{\alpha}$ and $\ket{\beta}$ are referring the different states belonging to the same complete state set). 
+
+Now we come back to show $a_{\beta} ={\sum}_\alpha \braket{\beta|\alpha} a_{\alpha}$ is true. We consider 2 kinds of state, defined respectively by eigenstate set $\ket{1},\ket{2},...$ and $\ket{\lambda_1}, \ket{\lambda_2},...$. In other words, we are looking at two different state in Fock space $\ket{n_1, n_2,...}$ and $\ket{n_{\lambda_1}, n_{\lambda_2},...}$.
+
+\begin{eqnarray*}  
+&  & a_{\lambda_1}^{\dag}  \ket{n_{\lambda_1}, n_{\lambda_2}, \ldots} \\ & = & \sqrt{n_{\lambda_1} + 1} \ket{n_{\lambda_1} + 1,  n_{\lambda_2}, \ldots}\\  & = & \sqrt{n_{\lambda_1} + 1} \sqrt{\frac{(N + 1) !}{(n_{\lambda_1} + 1)  !n_{\lambda_2} ! \ldots .}} \widehat{\prod} (\ket{\lambda_1}    \ket{\lambda_1} \ldots \ket{\lambda_1}  \ket{\lambda_1} \ldots  \ket{\lambda_1} \ldots .  )\\  & = & \sqrt{\frac{(N + 1) !}{n_{\lambda_1} !n_{\lambda_2} ! \ldots .}}  \widehat{\prod} \left( \underset{i}{\sum} \ket{i}\braket{i|\lambda_1} |  \ket{\lambda_1} \ldots . \ket{\lambda_1}  \ket{\lambda_1}  \ldots \ket{\lambda_1} \ldots .   \right)\\  & = & \underset{i}{\sum}  \braket{i|\lambda_1} \sqrt{\frac{(N + 1)  !}{n_{\lambda_1} !n_{\lambda_2} ! \ldots .}} \widehat{\prod} (\ket{i}   \ket{\lambda_1}  \ldots . \ket{\lambda_1}  \ket{\lambda_2} \ldots \ket{\lambda_2} \ldots .  )\\  & = & \underset{i}{\sum}  \braket{i|\lambda_1} \widehat{\prod}  \left( \ket{i}  \sqrt{\frac{(N + 1) !}{n_{\lambda_1} !n_{\lambda_2}  ! \ldots .}} \widehat{\prod} (\ket{\lambda_1}  \ldots . \ket{\lambda_1}  \ket{\lambda_1} \ldots \ket{\lambda_1} \ldots .   ) \right)\\  & = & \sqrt{N + 1} \underset{i}{\sum}  \braket{i|\lambda_1}  \widehat{\prod} (\ket{i}  \ket{n_{\lambda_1}, n_{\lambda_2},  \ldots })\\  & = & \sqrt{N + 1} \underset{i}{\sum}  \braket{i|\lambda_1}  \widehat{\prod} \left( \ket{i}  \underset{n_1, n_2, \ldots .}{\sum}  c_{n_1 n_2 \ldots .} \ket{n_1, n_2, \ldots} \right)\\  & = & \sqrt{N + 1} \underset{i}{\sum} \underset{n_1, n_2, \ldots .}{\sum}  c_{n_1 n_2 \ldots .}  \braket{i|\lambda_1} \widehat{\prod} (\ket{i} \ket{n_1, n_2, \ldots})\\  & = & \sqrt{N + 1} \underset{i}{\sum} \underset{n_1, n_2, \ldots .}{\sum}  c_{n_1 n_2 \ldots .}  \braket{i|\lambda_1} \widehat{\prod} \left( \bra{i}  \sqrt{\frac{N!}{n_1 !n_2 ! \ldots .}} \widehat{\prod} (\ket{1}   \ldots . \ket{1}  \ket{2} \ldots \ket{2} \ldots .   ) \right)\\  & = & \underset{i}{\sum} \underset{n_1, n_2, \ldots .}{\sum} c_{n_1 n_2  \ldots .}  \braket{i|\lambda_1} \sqrt{\frac{(N + 1) !}{n_1 !n_2 !  \ldots .}} \widehat{\prod} (\ket{i}  \ket{1}  \ldots . \ket{1}   \ket{2} \ldots \ket{2} \ldots .  )\\  & = & \underset{i}{\sum} \underset{n_1, n_2, \ldots .}{\sum} c_{n_1 n_2  \ldots .}  \braket{i|\lambda_1} \sqrt{n_i + 1} \ket{n_1, n_2,  \ldots, n_i + 1, \ldots}\\  & = & \underset{i}{\sum} \underset{n_1, n_2, \ldots .}{\sum} c_{n_1 n_2  \ldots .}  \braket{i|\lambda_1} a_i^{\dag} \ket{n_1, n_2,  \ldots, n_i, \ldots}\\  & = & \underset{i}{\sum}  \braket{i|\lambda_1} a_i^{\dag}  \underset{n_1, n_2, \ldots .}{\sum} c_{n_1 n_2 \ldots .} \ket{n_1,  n_2, \ldots, n_i, \ldots}\\  & = & \underset{i}{\sum}  \braket{i|\lambda_1} a_i^{\dag} |   n_{\lambda_1}, n_{\lambda_2}, \ldots . >\end{eqnarray*}
+
+\subsection{Second quantization of Hamiltonian $H$}
+Energy operator is also a single-particle operator. For electrons in graphene, they are fermions, so it should come as no surprise that some items in $\hat{H} = \sum_{\alpha \beta} \braket{\alpha | \hat{h} | \beta} a_{\alpha}^{\dag}a_{\beta}$ will cancel each other due to anti-commuting relation. The way tight bonding comes into this equation is by considering $\braket{\alpha | \hat{h} | \beta}$ as $\gamma_{mn}$ in previous derivations. Just as $\gamma_{mn}$, $\braket{\alpha | \hat{h} | \beta}$, known as \textit{hopping term}, marks the interaction strength, and we only select several states to make $H$ simpler.
+
+
+Now, consider a system consisting of free Fermions. Note that, since all particles are not interacting, only diagonal terms in $\hat{H}$ remains, as (from now on, for the sake of simplicity (of typing), I will refer $\hat{H}$ as $H$, and $\sigma$ labels spin):
+
+\begin{equation}
+    H_{\text{free}} = \underset{k, \sigma}{\sum} \varepsilon_k a_{k\sigma}^{\dag} a_{k \sigma}
+    \label{ham}
+\end{equation}
+Note that, we can specifically write the equation in momentum space, or $k$ space. The key here is to jump between position state space, labeled by $\ket{r_j}$, and momentum space, labeled by $\ket{k}$, as follows:
+\begin{equation}
+    a_{r_j} = \underset{k}{\sum}\braket{r_j|k}a_k=\dfrac{1}{\sqrt{N}}\underset{k}{\sum}\exp{(ikr_j)}a_k, a^{\dag}_{r_j}  = \dfrac{1}{\sqrt{N}}\underset{k}{\sum}\exp{(-ikr_j)}a^{\dag}_k
+\end{equation}
+Plugging this into equation \ref{ham}, we have
+\begin{equation}
+    H_{\text{free}} = 
+    \underset{k, \sigma}{\sum} 
+    \varepsilon_k a_{k\sigma}^{\dag} a_{k \sigma}
+    =\dfrac{1}{N} \underset{k, \sigma}{\sum} 
+    \varepsilon_k \underset{r_i,r_j}{\sum}\exp{(ik(r_i-r_j))} a^{\dag}_{r_i\sigma}a_{r_j\sigma}
+    \label{raw_tb}
+\end{equation}
+Note here $N$ marks \textit{the number of available $k$ states}. Define the hopping energy $t_{ij} = \dfrac{1}{N} \underset{k}{\sum}\varepsilon_k\exp{(ik(r_i-r_j))}$, now the Hamiltonian reads $H_{\text{free}} = \underset{r_i,r_j}{\sum} t_{ij}a^{\dag}_{r_i\sigma} a_{r_j\sigma}$. 
+
+Now we consider a special case, where fermions live on a Bravais lattice (i.e., one atom per unit cell) which defines a potential well on each atom. Obviously, this will change $\varepsilon_k$, so the hopping term changes. Acknowledging that, we also note that $t_{ij} = \dfrac{1}{N} \underset{k}{\sum}\varepsilon_k\exp{(ik(r_i-r_j))}$ describes how easy it is for a electron jumping ("hopping") from site $r_i$ to $r_j$. \textcolor{red}{Here comes the tight binding idea.} As a reasonable belief, it is very unlikely for electron to travel from $r_i$ to $r_j$ if these sites are not nearest neighbors. In other words, $t_{ij}$ is only non-zero if $r_i$ and $r_j$ are nearest neighbor. Say now $t_{ij}=-t$. Therefore, denote nearest sites as $<ij>$, now we have
+\begin{equation}
+    H = - t \underset{< i j > \sigma}{\sum} (a_{i \sigma}^{\dag} a_{j \sigma} +a_{j \sigma}^{\dag} a_{i \sigma})
+    \label{tb}
+\end{equation}
+
+% https://bpb-us-w2.wpmucdn.com/u.osu.edu/dist/3/67057/files/2018/09/tight-binding_model_in_the_second_quantization_formalism-1egl8n3.pdf
+\subsection{Tight binding model of monolayer graphene}
+
+Graphene is a system consisting of two different sets of atoms, namely A and B type atoms. A and B shares the same symmetry. Therefore, it is necessary to have separate creation and annihilation operators for sites at A and B, and we define them as $A^{\dag}(r),A(r),B^{\dag}(r), B(r)$. Here, note in equation \ref{tb}:
+\begin{enumerate}
+    \item The original tight binding equation can be further written as
+    \begin{equation}
+    H_{\text{free}} 
+    =\dfrac{1}{N} \underset{k, \sigma}{\sum} 
+    \varepsilon_k \underset{r_i\neq r_j}{\sum}\exp{(ik(r_i-r_j))} a^{\dag}_{r_i\sigma}a_{r_j\sigma} +
+    \dfrac{1}{N} \underset{k, \sigma}{\sum} 
+    \varepsilon_k \underset{r_i}{\sum} a^{\dag}_{r_i\sigma}a_{r_i\sigma}
+    \end{equation}
+    Note that the second term can be rewritten as a constant $ \underset{k, \sigma}{\sum} 
+    \varepsilon_k$, then it is safe to get rid of the constant. Now
+    \begin{equation}
+    H_{\text{free}}  = 
+        \dfrac{1}{N} \underset{k, \sigma}{\sum} 
+    \varepsilon_k \underset{r_i\neq r_j}{\sum}\exp{(ik(r_i-r_j))} a^{\dag}_{r_i\sigma}a_{r_j\sigma}
+    \end{equation}
+    \item Under nearest site assumption, for each atom in group A, all nearest atoms are in group B. In other words, equation \ref{tb} can be written as:
+    \begin{eqnarray*}  H & = & - t \underset{r, r'}{\sum} (A^{\dag} (r) B (r') + B^{\dag} (r') A  (r))\\  & = & - t \underset{r, \delta\neq0}{\sum} (A^{\dag} (r) B (r + \delta) +  B^{\dag} (r+\delta) A (r )) 
+    \\  & = & - t \underset{r, \delta_{1,2,3}}{\sum} (A^{\dag} (r) B (r + \delta) +  B^{\dag} (r+\delta) A (r)) 
+    \end{eqnarray*}
+    where, $r$ marks all lattice site for A atoms, $\delta$ are lattice symmetry vectors, namely $\delta_1,\delta_2,\delta_3$, defined as
+    \begin{equation}
+        \delta_1 = \dfrac{a}{2}(1,\sqrt{3}), \delta_2 = \dfrac{a}{2}(1,-\sqrt{3}),\delta_3 = a(1,0).
+    \end{equation}
+\end{enumerate}
+
+Now we began to solve this $H$. As the first step, we jump back to the momentum space, using the relation
+\begin{equation}
+    A_{r} = \dfrac{1}{\sqrt{N/2}}\underset{k}{\sum}\exp{(-ikr)}A_k
+\end{equation}
+we have (note that $\underset{r}{\sum}\exp(i(k-k')r)=\dfrac{N}{2}\delta_{kk'}$)
+\begin{eqnarray*}  H & = & - t \underset{r, \delta_{1, 2, 3}}{\sum} A^{\dag} (r) B (r + \delta)  + B^{\dag} (r + \delta) A (r)\\  & = & - \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum}  \underset{k}{\sum} \exp (i k r) A_k^{\dag} \underset{k'}{\sum} \exp (- i k'   (r + \delta)) B_{k'}\\  & - & \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum}  \underset{k'}{\sum} \underset{}{\exp (i k'  (r + \delta)) B^{\dag}_{k'}  \underset{k}{\sum}} \exp (- i k r) A_k\\  & = & - \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum} \underset{k,  k'}{\sum} \exp (i (k - k' ) r) \exp (- i k' \delta) A_k^{\dag} B_{k'}\\  & - & \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum} \underset{k,  k'}{\sum} \exp (- i (k - k') r) \exp (i k' \delta) A_k B^{\dag}_{k'}\\  & = & - \dfrac{2}{N} t \underset{\delta_{1, 2, 3}}{\sum} \underset{k,  k'}{\sum} \left( \underset{r}{\sum} \exp (i (k - k' ) r) \right) \exp (- i  k' \delta) A_k^{\dag} B_{k'}\\  & - & \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum} \underset{k,  k'}{\sum} \left( \underset{r}{\sum} \exp (- i (k - k' ) r) \right) \exp (i  k' \delta) A_k B^{\dag}_{k'}\\  & = & - \dfrac{2}{N} t \underset{\delta_{1, 2, 3}}{\sum} \underset{k,  k'}{\sum \dfrac{N}{2}} \delta_{k k'} \exp (- i k' \delta) A_k^{\dag} B_{k'}  - \dfrac{2}{N} t \underset{r, \delta_{1, 2, 3}}{\sum} \underset{k, k'}{\sum}  \dfrac{N}{2} \delta_{k k'} \exp (i k' \delta) A_k B^{\dag}_{k'}\\  & = & - t \underset{\delta_{1, 2, 3}}{\sum} \underset{k}{\sum} (\exp (- i k  \delta) A_k^{\dag} B_k + \exp (i k \delta) A_k B^{\dag}_k)\\  &  & \end{eqnarray*}
+
+Or, this can be further written as
+\begin{equation}
+    H =  - t   \underset{k}{\sum} \left( A_k^{\dag} B_k \underset{\delta_{1, 2, 3}}{\sum} \exp (- i k   \delta)  +  A_k B^{\dag}_k  \underset{\delta_{1, 2, 3}}{\sum} \exp (i k   \delta)\right) 
+\end{equation}
+
+Looking at this Hamiltonian, for each $k$, we have four operators mixing together, namely $A_k, B_k, A^{\dag}_k, B^{\dag}_k$, or put it in another way, \textit{a linear combination}. In physics, whenever we see linear combination, it is always a good idea to make it diagonal! In this sense, we rewrite $H$ as a matrix form:
+
+\begin{eqnarray*}  H & = & - t \underset{k}{\sum} \left(\begin{array}{c}    A^{\dag}_k\\    B_k^{\dag}  \end{array}\right)^T \left(\begin{array}{cc}    0 & \underset{\delta_{1, 2, 3}}{\sum} \exp (i k \delta)\\    \underset{\delta_{1, 2, 3}}{\sum} \exp (- i k \delta) & 0  \end{array}\right) \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)\\  & = & - t \underset{k}{\sum} \left(\begin{array}{c}    A^{\dag}_k\\    B_k^{\dag}  \end{array}\right)^T \left(\begin{array}{cc}    0 & \Delta_k\\    \Delta^{\ast}_k & 0  \end{array}\right) \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)\\  & = & - t \underset{k}{\sum} \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)^{\dag} \left(\begin{array}{cc}    0 & \Delta_k\\    \Delta^{\ast}_k & 0  \end{array}\right) \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)\end{eqnarray*}
+
+where, for simplicity, we define $\Delta_k = \underset{\delta_{1, 2, 3}}{\sum} \exp (i k \delta)$, and $\Delta^{\ast}_k = \underset{\delta_{1, 2, 3}}{\sum} \exp (- i k \delta)$.
+We are now left with the simple task to decompose this matrix $M = \left(\begin{array}{cc}  0 & \Delta_k\\  \Delta^{\ast}_k & 0\end{array}\right)$ into its diagonal form, which gives the eigenvalue equation:
+\begin{equation}
+    \lambda^2 -  \Delta_k \Delta^{\ast}_k = 0 
+\end{equation}
+Note that, according to definition,
+\begin{eqnarray*}  \Delta_k \Delta^{\ast}_k & = & \left( \exp (- i k_x a) + 2 \exp \left(  \frac{i k_x a}{2} \right) \cos \left( \frac{\sqrt{3}}{2} k_y a \right)  \right) \left( \exp (i k_x a) + 2 \exp \left( - \frac{i k_x a}{2} \right)  \cos \left( \frac{\sqrt{3}}{2} k_y a \right) \right)\\  & = & 1 + 4 \cos^2 \left( \frac{\sqrt{3}}{2} k_y a \right) + 4 \cos \left(  \frac{\sqrt{3}}{2} k_y a \right) \cos \left( \frac{3}{2} k_x a \right)\end{eqnarray*}
+then, assume the unitary matrix that makes $M$ diagonal is $U$, we have
+\begin{eqnarray*}  H & = & - t \underset{k}{\sum} \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)^{\dag} \left(\begin{array}{cc}    0 & \Delta_k\\    \Delta^{\ast}_k & 0  \end{array}\right) \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)\\  & = & - \underset{k}{\sum} \left( U \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right) \right)^{\dag} \left(\begin{array}{cc}    \varepsilon_k & 0\\    0 & - \varepsilon_k  \end{array}\right) U \left(\begin{array}{c}    A_k\\    B_k  \end{array}\right)\end{eqnarray*}
+and the energy, $\varepsilon_k$ is (note both $\varepsilon_k$ and $-\varepsilon_k$ are allowed)
+\begin{equation}
+    \varepsilon_k = \sqrt{1 + 4 \cos^2 \left( \frac{\sqrt{3}}{2} k_y a \right) +4 \cos \left( \frac{\sqrt{3}}{2} k_y a \right) \cos \left( \frac{3}{2} k_x a\right)}
+\end{equation}
+
+Whoo-hoo! This is the famous graphene energy dispersion relation.
+
+% \section{A (very short) introduction to relativistic quantum mechanics}
+% We will start with the concept of \textit{spin}, and we will skip the lengthy discussion about the general description of integer- and half-integer-based spin systems. For electron, there are two possible spin states, namely $\frac{1}{2}$ and $-\frac{1}{2}$, therefore, any possible state is a mixture of two, represented as $\chi=(a,b)^{\text{T}}$. The spin operator, $S$, has three components pointing along $x,y,z$, defined as $S_x, S_y, S_z$, and the overall magnitude $S^2$ is simply $S^2_x+S^2_y+S^2_z$. With the state space spun by the two eigenstates of $S_z$, $S_x, S_y, S_z$ reads
+
+% \begin{equation}
+%     \begin{array}{lll}  S_{x,y,z} = \dfrac{\hbar}{2} \sigma_{x,y,z}, \sigma_x = \left(\begin{array}{cc}    0 & 1\\    1 & 0  \end{array}\right), & \sigma_y = \left(\begin{array}{cc}    0 & i\\    - i & 0  \end{array}\right), & \sigma_z = \left(\begin{array}{cc}    1 & 0\\    0 & - 1  \end{array}\right)\end{array}
+% \end{equation}
+
+% Here, matrices $\sigma_{x,y,z}$ are called \textit{Pauli matrices}. Note that, from now on, we are no long dealing with one-component wave function. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+\bibliographystyle{alpha}
+\bibliography{sample}
