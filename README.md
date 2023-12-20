@@ -1,2 +1,2 @@
 # qtt
-yin's notes on Quantum Transport Theory.
+ycn's notes on Quantum Transport Theory.
