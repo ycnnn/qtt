@@ -281,17 +281,20 @@ It is worth noting that, now the spin operator $\sigma$ becomes part of $H$, the
 need to be modified. We use a new index, $n$, to denote the orbital motion, such that
 \begin{equation}
     (H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \pi + \frac{\hbar}{4 m^2 c^2} p \cdot (\sigma \times \nabla V))\ket{nk}=E_n(k)\ket{nk}
+\label{soh}
 \end{equation}
 
 As the set $\ket{\nu 0}$ is orthogonal and complete, it is possible to expand $\ket{nk}$ by $\ket{\nu 0}$ (note that, we assume $k$ at $\Gamma$ point. It is trivial to move to other locations by replacing with $k-k_0$):
+\begin{equation}
+    \ket{n k} = \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} c_{n \nu'\sigma'} \ket{\nu' \sigma'}, \nu' \sigma' = \ket{\nu' 0} \otimes \ket{ \sigma'}
+\end{equation}
+Again, be reminded that $\ket{\nu 0}$ is the eigenstate of $H_0$, i.e., no SO interaction is accounted. As we have done previously, we consider $\Delta H = \frac{\hbar}{m} k \cdot \pi + \frac{\hbar}{4 m^2 c^2} p \cdot (\sigma \times \nabla V)$ as a perturbation. In Equation \ref{soh}, we multiply the left with $\ket{\nu k}$, then
 
+\begin{eqnarray*}  c_{n \nu \sigma} E_n (k) & = & \underset{\nu', \sigma' = \uparrow,  \downarrow}{\sum} c_{n \nu' \sigma'} \bra{\nu \sigma} \left( H_0 + \frac{\hbar^2  k^2}{2 m} + \frac{\hbar}{m} k \cdot \pi + \frac{\hbar}{4 m^2 c^2} p \cdot  (\sigma \times \nabla V) \right) \ket{\nu' \sigma'}\\  & = & \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} c_{n \nu'  \sigma'} \left( E_{\nu} + \frac{\hbar^2 k^2}{2 m} \right) \braket{\nu \sigma |\nu'  \sigma'} \\  & + & \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} \frac{\hbar}{m}  k \cdot c_{n \nu' \sigma'} \braket{\nu \sigma |\pi|\nu' \sigma'}\\  & + & \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} \frac{\hbar}{4  m^2 c^2} c_{n \nu' \sigma'} \braket{\nu \sigma |p \cdot (\sigma \times \nabla V)|  \nu' \sigma'}\\  & = & c_{n \nu \sigma} \left( E_{\nu} + \frac{\hbar^2 k^2}{2 m} \right) +  \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} c_{n \nu' \sigma'}  \frac{\hbar}{m} k \cdot P_{\nu \nu' \sigma \sigma'} + \underset{\nu',  \sigma' = \uparrow, \downarrow}{\sum} c_{n \nu' \sigma'} \frac{\hbar}{4 m^2  c^2} \Delta_{\nu \nu' \sigma \sigma'}\end{eqnarray*}
+where, the coefficients $P_{\nu \nu' \sigma \sigma'} = \braket{\nu \sigma |\pi|\nu'\sigma'}$, and $\Delta_{\nu \nu' \sigma \sigma'} = \braket{\nu \sigma |p \cdot (\sigma \times \nabla V)|\nu'\sigma'}$. In this relation, $\left( E_{\nu} + \frac{\hbar^2 k^2}{2 m} \right)$ marks the unperturbed energy, and $P_{\nu \nu' \sigma \sigma'}, \Delta_{\nu \nu' \sigma \sigma'}$ controls the mixing of different orbitals. When $k$ is small, we can assume $\pi\approx p$, and, as a result, $P_{\nu \nu' \sigma \sigma'} = \braket{\nu \sigma |p|\nu'\sigma'} = \delta_{\sigma \sigma'}P_{\nu \nu'}$. In this sense, $\Delta_{\nu \nu' \sigma \sigma'} = \braket{\nu \sigma |p \cdot (\sigma \times \nabla V)|\nu'\sigma'}$ term has a more pronounced effect, that is, even at $k=0$. This is also the origin of many energy splitting at $\Gamma$ point.
+In the reality, often it is the case that we are only interested in a small vicinity around $k=0$, and we may want to consider some bands that are close enough and omit all remote bands.
 
-
-
-
-
-
-
+\subsection{The envelope function approximation (EFA)}
 
 \end{document}
 

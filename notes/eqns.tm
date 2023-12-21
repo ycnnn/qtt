@@ -61,9 +61,19 @@
     <around*|(|H<rsub|0>+<frac|\<hbar\><rsup|2>k<rsup|2>|2m>+<frac|\<hbar\>|m>k\<cdot\>p|)>\<nu\>k=E<rsub|\<nu\>><around*|(|k|)>\<nu\>k
   </equation*>
 
-  <\equation*>
-    n k=<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>>
-  </equation*>
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|c<rsub|n\<nu\>\<sigma\>>E<rsub|n><around*|(|k|)>>|<cell|=>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>>\<nu\>\<sigma\><around*|(|H<rsub|0>+<frac|\<hbar\><rsup|2>k<rsup|2>|2m>+<frac|\<hbar\>|m>k\<cdot\>\<pi\>+<frac|\<hbar\>|4m<rsup|2>
+    c<rsup|2>>p\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V|)>|)>\<nu\><rprime|'>\<sigma\><rprime|'>>>|<row|<cell|>|<cell|=>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|E<rsub|\<nu\>>+<frac|\<hbar\><rsup|2>k<rsup|2>|2m>|)>\<nu\>\<sigma\>
+    \<nu\><rprime|'>\<sigma\><rprime|'>\<delta\><rsub|\<nu\>\<nu\><rprime|'>>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|\<hbar\>|m>k\<cdot\>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>>\<nu\>\<sigma\>\<pi\>\<nu\><rprime|'>\<sigma\><rprime|'>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|\<hbar\>|4m<rsup|2>
+    c<rsup|2>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>>\<nu\>\<sigma\><around*|(|p\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V|)>|)>\<nu\><rprime|'>\<sigma\><rprime|'>>>|<row|<cell|>|<cell|=>|<cell|c<rsub|n\<nu\>\<sigma\>><around*|(|E<rsub|\<nu\>>+<frac|\<hbar\><rsup|2>k<rsup|2>|2m>|)>+<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>s><frac|\<hbar\>|m>k\<cdot\>P<rsub|\<nu\>\<nu\><rprime|'>\<sigma\>\<sigma\><rprime|'>>+<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>><frac|\<hbar\>|4m<rsup|2>
+    c<rsup|2>>\<Delta\><rsub|\<nu\>\<nu\><rprime|'>\<sigma\>\<sigma\><rprime|'>>>>>>
+  </eqnarray*>
+
+  \;
+
+  \;
+
+  \;
 </body>
 
 <\initial>
