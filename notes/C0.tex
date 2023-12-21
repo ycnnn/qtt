@@ -243,16 +243,24 @@ and the energy, $\varepsilon_k$ is (note both $\varepsilon_k$ and $-\varepsilon_
 
 Whoo-hoo! This is the famous graphene energy dispersion relation.
 
-% \section{A (very short) introduction to relativistic quantum mechanics}
-% We will start with the concept of \textit{spin}, and we will skip the lengthy discussion about the general description of integer- and half-integer-based spin systems. For electron, there are two possible spin states, namely $\frac{1}{2}$ and $-\frac{1}{2}$, therefore, any possible state is a mixture of two, represented as $\chi=(a,b)^{\text{T}}$. The spin operator, $S$, has three components pointing along $x,y,z$, defined as $S_x, S_y, S_z$, and the overall magnitude $S^2$ is simply $S^2_x+S^2_y+S^2_z$. With the state space spun by the two eigenstates of $S_z$, $S_x, S_y, S_z$ reads
+\section{A (very short) introduction to relativistic quantum mechanics}
+We will start with the concept of \textit{spin}, and we will skip the lengthy discussion about the general description of integer- and half-integer-based spin systems. For electron, there are two possible spin states, namely $\frac{1}{2}$ and $-\frac{1}{2}$, therefore, any possible state is a mixture of two, represented as $\chi=(a,b)^{\text{T}}$. The spin operator, $S$, has three components pointing along $x,y,z$, defined as $S_x, S_y, S_z$, and the overall magnitude $S^2$ is simply $S^2_x+S^2_y+S^2_z$. With the state space spun by the two eigenstates of $S_z$, $S_x, S_y, S_z$ reads
 
-% \begin{equation}
-%     \begin{array}{lll}  S_{x,y,z} = \dfrac{\hbar}{2} \sigma_{x,y,z}, \sigma_x = \left(\begin{array}{cc}    0 & 1\\    1 & 0  \end{array}\right), & \sigma_y = \left(\begin{array}{cc}    0 & i\\    - i & 0  \end{array}\right), & \sigma_z = \left(\begin{array}{cc}    1 & 0\\    0 & - 1  \end{array}\right)\end{array}
-% \end{equation}
+\begin{equation}
+    \begin{array}{lll}  S_{x,y,z} = \dfrac{\hbar}{2} \sigma_{x,y,z}, \sigma_x = \left(\begin{array}{cc}    0 & 1\\    1 & 0  \end{array}\right), & \sigma_y = \left(\begin{array}{cc}    0 & i\\    - i & 0  \end{array}\right), & \sigma_z = \left(\begin{array}{cc}    1 & 0\\    0 & - 1  \end{array}\right)\end{array}
+\end{equation}
 
-% Here, matrices $\sigma_{x,y,z}$ are called \textit{Pauli matrices}. Note that, from now on, we are no long dealing with one-component wave function. 
+Here, matrices $\sigma_{x,y,z}$ are called \textit{Pauli matrices}. Note that, from now on, we are no long dealing with one-component wave function.
 
+\subsection{Pauli's spin-orbit coupling term in $k\cdot p$ thoery}
 
+In quantum mechanics, Dirac equation accurately capture the interaction of spin with compatibility to Lorentizian invariability. While we are not ready to discuss the exact Dirac equation, a take home message is, under non-relativistic limit, the net effect of Dirac equation is adding one more term in $H$ in terms of spin-orbit coupling (SOC):
+
+\begin{equation}
+    H_{\text{SO}} = - \frac{\hbar}{4 m c^2} \sigma \cdot p \times \nabla V_0
+\end{equation}
+
+Where, $\sigma = (\sigma_x,\sigma_y,\sigma_z)$ is the vector of Pauli matrices, $p$ is the momentum, and $V_0$ is the atom nucleus Coulumb potential. 
 
 
 
