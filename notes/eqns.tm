@@ -56,6 +56,14 @@
     e<rsup|i k x><around*|(|\<hbar\>k\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V|)>|)>-e<rsup|i
     k x>p\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V|)>>>>>
   </eqnarray*>
+
+  <\equation*>
+    <around*|(|H<rsub|0>+<frac|\<hbar\><rsup|2>k<rsup|2>|2m>+<frac|\<hbar\>|m>k\<cdot\>p|)>\<nu\>k=E<rsub|\<nu\>><around*|(|k|)>\<nu\>k
+  </equation*>
+
+  <\equation*>
+    n k=<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>c<rsub|n\<nu\><rprime|'>\<sigma\><rprime|'>>
+  </equation*>
 </body>
 
 <\initial>

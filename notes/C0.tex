@@ -272,12 +272,18 @@ Recall that, we are now dealing with two-component spinors. First, note that
 
 Therefore, we rewrite $H$ As
 \begin{eqnarray*}  H & = & \left( H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot p  \right) + \left( \frac{\hbar}{4 m^2 c^2}  (\hbar k \cdot (\sigma \times  \nabla V)) + p \cdot (\sigma \times \nabla V) \right)\\  & = & H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \left( p +  \frac{\hbar}{4 m c^2} \sigma \times \nabla V \right) + \frac{\hbar}{4 m^2  c^2} p \cdot (\sigma \times \nabla V)\\  & = & H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \pi +  \frac{\hbar}{4 m^2 c^2} p \cdot (\sigma \times \nabla V)\end{eqnarray*}
-
 where $\pi$ is defined as $\pi = p + \frac{\hbar}{4 m c^2} \sigma \times \nabla V$. By using this definition, we maintain the $k \cdot p$ form.
+It is worth noting that, now the spin operator $\sigma$ becomes part of $H$, then the spin quantum number is no longer \textit{a good quantum number.} Therefore, the eigenstates given by
 
+\begin{equation}
+    \left( H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot p \right) \ket{\nu k} = E_{\nu} (k) \ket{\nu k}
+\end{equation}
+need to be modified. We use a new index, $n$, to denote the orbital motion, such that
+\begin{equation}
+    (H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \pi + \frac{\hbar}{4 m^2 c^2} p \cdot (\sigma \times \nabla V))\ket{nk}=E_n(k)\ket{nk}
+\end{equation}
 
-
-
+As the set $\ket{\nu 0}$ is orthogonal and complete, it is possible to expand $\ket{nk}$ by $\ket{\nu 0}$ (note that, we assume $k$ at $\Gamma$ point. It is trivial to move to other locations by replacing with $k-k_0$):
 
 
 
