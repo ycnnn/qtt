@@ -257,10 +257,11 @@ Here, matrices $\sigma_{x,y,z}$ are called \textit{Pauli matrices}. Note that, f
 In quantum mechanics, Dirac equation accurately capture the interaction of spin with compatibility to Lorentizian invariability. While we are not ready to discuss the exact Dirac equation, a take home message is, under non-relativistic limit, the net effect of Dirac equation is adding one more term in $H$ in terms of spin-orbit coupling (SOC):
 
 \begin{equation}
-    H_{\text{SO}} = - \frac{\hbar}{4 m c^2} \sigma \cdot p \times \nabla V_0
+    H_{\text{SO}} =  \frac{\hbar}{4 m c^2} \sigma \cdot p \times E
 \end{equation}
 
-Where, $\sigma = (\sigma_x,\sigma_y,\sigma_z)$ is the vector of Pauli matrices, $p$ is the momentum, and $V_0$ is the atom nucleus Coulumb potential. 
+Where, $\sigma = (\sigma_x,\sigma_y,\sigma_z)$ is the vector of Pauli matrices, $p$ is the momentum, and $E$ is  the electric field the particle feels. In our case, it is either from the single-atom nucleus Coulomb potential, $-\nabla V$, or the crystal potential $\nabla V_0$ with lattice symmetry. 
+With this new addition, we can revisit the derivations of the $k \cdot p$ approximation.
 
 
 
