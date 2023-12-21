@@ -257,18 +257,23 @@ Here, matrices $\sigma_{x,y,z}$ are called \textit{Pauli matrices}. Note that, f
 In quantum mechanics, Dirac equation accurately capture the interaction of spin with compatibility to Lorentizian invariability. While we are not ready to discuss the exact Dirac equation, a take home message is, under non-relativistic limit, the net effect of Dirac equation is adding one more term in $H$ in terms of spin-orbit coupling (SOC):
 
 \begin{equation}
-    H_{\text{SO}} =  \frac{\hbar}{4 m c^2} \sigma \cdot p \times E
+    H_{\text{SO}} =  \frac{\hbar}{4 m^2 c^2} \sigma \cdot p \times E
 \end{equation}
 
 Where, $\sigma = (\sigma_x,\sigma_y,\sigma_z)$ is the vector of Pauli matrices, $p$ is the momentum, and $E$ is  the electric field the particle feels. In our case, it is either from the single-atom nucleus Coulomb potential, $-\nabla V$, or the crystal potential $\nabla V_0$ with lattice symmetry. 
-With this new addition, we can revisit the derivations of the $k \cdot p$ approximation.
+With this new addition, we can revisit the derivations of the $k \cdot p$ approximation:
 
+\begin{equation}
+    H = \left( \frac{p^2}{2 m} + V - \frac{\hbar}{4 m^2 c^2} \sigma \cdot p \times\nabla V \right)
+\end{equation}
 
+Recall that, we are now dealing with two-component spinors. First, note that
+\begin{eqnarray*}  H (e^{i k x} u_{n k} (x)) & = & \left( \frac{p^2}{2 m} + V - \frac{\hbar}{4  m^2 c^2} \sigma \cdot p \times \nabla V \right) e^{i k x} u_{n k} (x)\\  & = & \left( \frac{p^2}{2 m} + V \right) e^{i k x} u_{n k} (x) -  \frac{\hbar}{4 m^2 c^2} \sigma \cdot p \times \nabla V (e^{i k x} u_{n k}  (x))\\  & = & e^{i k x} (H_0 + H_1) - \frac{\hbar}{4 m^2 c^2} \sigma \cdot p \times  \nabla V (e^{i k x} u_{n k} (x))\\  & = & e^{i k x} \left( H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k  \cdot p \right) u_{n k} (x) + e^{i k x} \left( \frac{\hbar}{4 m^2 c^2}   (\hbar k \cdot (\sigma \times \nabla V)) + e^{i k x} p \cdot (\sigma \times  \nabla V) \right) u_{n k} (x)\end{eqnarray*}
 
+Therefore, we rewrite $H$ As
+\begin{eqnarray*}  H & = & \left( H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot p  \right) + \left( \frac{\hbar}{4 m^2 c^2}  (\hbar k \cdot (\sigma \times  \nabla V)) + p \cdot (\sigma \times \nabla V) \right)\\  & = & H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \left( p +  \frac{\hbar}{4 m c^2} \sigma \times \nabla V \right) + \frac{\hbar}{4 m^2  c^2} p \cdot (\sigma \times \nabla V)\\  & = & H_0 + \frac{\hbar^2 k^2}{2 m} + \frac{\hbar}{m} k \cdot \pi +  \frac{\hbar}{4 m^2 c^2} p \cdot (\sigma \times \nabla V)\end{eqnarray*}
 
-
-
-
+where $\pi$ is defined as $\pi = p + \frac{\hbar}{4 m c^2} \sigma \times \nabla V$. By using this definition, we maintain the $k \cdot p$ form.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  20 DEC 2023 20:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  20 DEC 2023 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,23 +506,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 255.
 
-[7] [8] (./C0.aux)
+[7]
+Overfull \hbox (65.8685pt too wide) in alignment at lines 271--271
+ [][][] []
+ []
+
+[8] (./C0.aux)
 Package rerunfilecheck Info: File `C0.out' has not changed.
 (rerunfilecheck)             Checksum: 61D31A7DE229BBF5204918A4390358AA;2072.
  ) 
 Here is how much of TeX's memory you used:
- 11275 strings out of 476025
- 178332 string characters out of 5790016
+ 11276 strings out of 476025
+ 178345 string characters out of 5790016
  1881388 words of memory out of 5000000
  31514 multiletter control sequences out of 15000+600000
  523649 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,14n,76p,2796b,588s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy7.pfb>
-Output written on C0.pdf (8 pages, 174715 bytes).
+Output written on C0.pdf (8 pages, 177262 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
