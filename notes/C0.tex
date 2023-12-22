@@ -306,8 +306,19 @@ Similarly, the idea is to expand the wave function at the band edge $k=0$:
     \Psi (r) = \underset{\nu', \sigma' = \uparrow, \downarrow}{\sum} \psi_{\nu' \sigma'} (r) u_{\nu' 0} (r) \otimes \ket{ \sigma'}
 \label{ef}
 \end{equation}
-Here, the coefficient $\psi_{\nu\sigma}(r)$ is called the \textit{envelope function}. Relatively, the Bloch function changes rapidly ($\propto$ the lattice constant), while the modulating coefficient $\psi_{\nu\sigma}(r)$ is slow varying. As we have done many times, we insert Equation \ref{ef} into Equation \ref{efh} to obtain the energy spectrum:
+Here, the coefficient $\psi_{\nu\sigma}(r)$ is called the \textit{envelope function}. Relatively, the Bloch function changes rapidly ($\propto$ the lattice constant), while the modulating coefficient $\psi_{\nu\sigma}(r)$ is slow varying. As we have done many times, we insert Equation \ref{ef} into Equation \ref{efh} to obtain the energy spectrum. Here, it will be helpful to note several relations:
+Denote the integration inside a unit cell as $\int_{\text{uc}}\text{d}r$, we note
+\begin{equation}
+    \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} \nabla u_{\nu' 0}=0,
+\end{equation}
+and
+\begin{equation}
+    \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} u_{\nu' 0}=\delta_{\nu \nu'}.
+\end{equation}
 
+
+Therefore, integrating over a single unit cell, we have
+\begin{eqnarray*}  &  & \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} \left( \frac{(- i \hbar  \nabla + e A)^2}{2 m} \right) \psi_{\nu' \sigma'} (r) u_{\nu' 0}\\  & \approx & \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} \left(  \frac{\hbar^2 \nabla^2 + e^2 A^2 - 2 i \hbar e A \cdot \nabla}{2 m} \right)  \psi_{\nu' \sigma'} (r) u_{\nu' 0}\\  & \approx & \frac{\hbar^2}{2 m} \int_{\text{uc}} \text{d} r u^{\ast}_{\nu  0} \nabla^2 \psi_{\nu' \sigma'} (r) u_{\nu' 0} + \frac{e^2 A^2}{2 m}  \psi_{\nu' \sigma'} (r) \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} u_{\nu'  0} - \frac{2 i \hbar e A}{2 m} \cdot \int_{\text{uc}} \text{d} r \nabla  u^{\ast}_{\nu 0} \psi_{\nu' \sigma'} (r) u_{\nu' 0}\\  & = & \frac{\hbar^2}{2 m} \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0}  (\psi_{\nu' \sigma'} (r) \nabla^2 u_{\nu' 0} + 2 \nabla \psi_{\nu' \sigma'}  (r) \cdot \nabla u_{\nu' 0} + u_{\nu' 0} \nabla^2 \psi_{\nu' \sigma'} (r))\\  & + & \frac{e^2 A^2}{2 m} \psi_{\nu' \sigma'} (r) \int_{\text{uc}} \text{d}  r u^{\ast}_{\nu 0} u_{\nu' 0} - \frac{2 i \hbar e A}{2 m} \cdot  \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0}  (\psi_{\nu' \sigma'} (r)  \nabla u_{\nu' 0} + u_{\nu' 0} \nabla \psi_{\nu' \sigma'} (r))\\  & \approx & \frac{\hbar^2}{2 m} \int_{\text{uc}} \text{d} r u^{\ast}_{\nu  0} \psi_{\nu' \sigma'} (r) \nabla^2 u_{\nu' 0} + 2 \frac{\hbar^2}{2 m}  \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} \nabla \psi_{\nu' \sigma'} (r)  \cdot \nabla u_{\nu' 0} + \frac{\hbar^2}{2 m} \int_{\text{uc}} \text{d} r  u^{\ast}_{\nu 0} u_{\nu' 0} \nabla^2 \psi_{\nu' \sigma'} (r)\\  & + & \frac{e^2 A^2}{2 m} \psi_{\nu' \sigma'} (r) \delta_{\nu \nu'} -  \frac{2 i \hbar e \psi_{\nu' \sigma'} (r)}{2 m} A \cdot \int_{\text{uc}}  \text{d} r u^{\ast}_{\nu 0} \nabla u_{\nu' 0}\\  & = & \frac{\hbar^2}{2 m} \psi_{\nu' \sigma'} (r) \int_{\text{uc}} \text{d}  r u^{\ast}_{\nu 0} \nabla^2 u_{\nu' 0} + 2 \frac{\hbar^2}{2 m} \nabla  \psi_{\nu' \sigma'} (r) \cdot \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0}  \nabla u_{\nu' 0} + \frac{\hbar^2}{2 m} \nabla^2 \psi_{\nu' \sigma'} (r)  \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} u_{\nu' 0}\\  & + & \frac{e^2 A^2}{2 m} \psi_{\nu' \sigma'} (r) \delta_{\nu \nu'} -  \frac{2 i \hbar e \psi_{\nu' \sigma'} (r)}{2 m} A \cdot \int_{\text{uc}}  \text{d} r u^{\ast}_{\nu 0} \nabla u_{\nu' 0}\\  & \approx & - \left( \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} p^2  u_{\nu' 0} \right) \psi_{\nu' \sigma'} (r) + \frac{\hbar^2}{2 m} \delta_{\nu  \nu'} \nabla^2 \psi_{\nu' \sigma'} (r) + \frac{e^2 A^2}{2 m} \delta_{\nu  \nu'} \psi_{\nu' \sigma'} (r)\\  & = & \left( - \int_{\text{uc}} \text{d} r u^{\ast}_{\nu 0} p^2 u_{\nu' 0}  + \frac{\hbar^2}{2 m} \delta_{\nu \nu'} + + \frac{e^2 A^2}{2 m} \delta_{\nu  \nu'} \right) \psi_{\nu' \sigma'} (r)\end{eqnarray*}
 
 
 
