@@ -78,9 +78,40 @@
     \<Psi\><around*|(|r|)>=<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0><around*|(|r|)>\<otimes\>\<sigma\><rprime|'>
   </equation*>
 
-  \;
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>\<otimes\>\<less\>\<sigma\><around*|\|||\<nobracket\>>H\<Psi\><around*|(|r|)>>|<cell|=>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><big|int><rsub|<text|uc>><text|d>r<around*|(|u<rsup|*\<ast\>><rsub|\<nu\>0>\<otimes\>\<less\>\<sigma\><around*|\|||\<nobracket\>>|)><around*|(|<frac|<around*|(|p+e
+    A|)><rsup|2>|2m>+V<rsub|0>+V|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>\<otimes\><around*|\||\<sigma\><rprime|'>\<gtr\>|\<nobracket\>>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|\<hbar\>|4m<rsup|2>c<rsup|2>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>\<less\>\<sigma\><around*|\|||\<nobracket\>><around*|(|p+e
+    A|)>\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V<rsub|0>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>\<otimes\><around*|\||\<sigma\><rprime|'>\<gtr\>|\<nobracket\>>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|g|2>\<mu\><rsub|<text|B>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>\<less\>\<sigma\><around*|\|||\<nobracket\>>\<sigma\>\<cdot\>B
+    \<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>\<otimes\><around*|\||\<sigma\><rprime|'>\<gtr\>|\<nobracket\>>>>|<row|<cell|>|<cell|=>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|<around*|(|-i
+    \<hbar\>\<nabla\>+e A|)><rsup|2>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)><around*|(|V<rsub|0>+V|)>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>u<rsub|\<nu\><rprime|'>0>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|\<hbar\>|4m<rsup|2>c<rsup|2>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>\<less\>\<sigma\><around*|\|||\<nobracket\>><around*|(|-i
+    \<hbar\>\<nabla\>+e A|)>\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V<rsub|0>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>\<otimes\><around*|\||\<sigma\><rprime|'>\<gtr\>|\<nobracket\>>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)><frac|g|2>\<mu\><rsub|<text|B>><big|int><rsub|<text|uc>>
+    u<rsup|*\<ast\>><rsub|\<nu\>0>u<rsub|\<nu\><rprime|'>0><text|d>r
+    \<less\>\<sigma\><around*|\|||\<nobracket\>>\<sigma\><around*|\||\<sigma\><rprime|'>\<gtr\>\<cdot\>B|\<nobracket\>>>>|<row|<cell|>|<cell|=>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|<around*|(|-i
+    \<hbar\>\<nabla\>+e A|)><rsup|2>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)><around*|(|V<rsub|0>+V|)>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>>\<delta\><rsub|\<nu\>\<nu\><rprime|'>>
+    >>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>><frac|\<hbar\>|4m<rsup|2>c<rsup|2>><big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0>\<less\>\<sigma\><around*|\|||\<nobracket\>><around*|(|-i
+    \<hbar\>\<nabla\>+e A|)>\<cdot\><around*|(|\<sigma\>\<times\>\<nabla\>V<rsub|0>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>\<otimes\><around*|\||\<sigma\><rprime|'>\<gtr\>|\<nobracket\>>>>|<row|<cell|>|<cell|+>|<cell|<below|<big|sum>|\<nu\><rprime|'>,\<sigma\><rprime|'>=\<uparrow\>,\<downarrow\>>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)><frac|g|2>\<mu\><rsub|<text|B>>\<delta\><rsub|\<nu\>\<nu\><rprime|'>>\<delta\><rsub|\<sigma\>\<sigma\><rprime|'>>
+    \<sigma\>\<cdot\>B>>>>
+  </eqnarray*>
 
-  \;
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|>|<cell|>|<cell|<big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|<around*|(|-i
+    \<hbar\>\<nabla\>+e A|)><rsup|2>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|\<hbar\><rsup|2>\<nabla\><rsup|2>-i
+    e \<hbar\><around*|(|\<nabla\>\<cdot\>A+A\<cdot\>\<nabla\>|)>+e<rsup|2>A<rsup|2>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>>>|<row|<cell|>|<cell|\<approx\>>|<cell|<big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|\<hbar\><rsup|2>\<nabla\><rsup|2>-i
+    e \<hbar\><around*|(|\<nabla\>\<cdot\>A+A\<cdot\>\<nabla\>|)>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>+<frac|e<rsup|2>A<rsup|2>|2m>\<delta\><rsub|\<nu\>\<nu\><rprime|'>>>>|<row|<cell|>|<cell|\<approx\>>|<cell|<frac|e<rsup|2>A<rsup|2>|2m>\<delta\><rsub|\<nu\>\<nu\><rprime|'>>+<big|int><rsub|<text|uc>><text|d>r
+    u<rsup|*\<ast\>><rsub|\<nu\>0><around*|(|<frac|\<hbar\><rsup|2>\<nabla\><rsup|2>-2i
+    e \<hbar\>A\<cdot\>\<nabla\>|2m>|)>\<psi\><rsub|\<nu\><rprime|'>\<sigma\><rprime|'>><around*|(|r|)>u<rsub|\<nu\><rprime|'>0>>>>>
+  </eqnarray*>
 
   \;
 
