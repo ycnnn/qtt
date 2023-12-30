@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  25 DEC 2023 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.14)  26 DEC 2023 09:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -321,7 +321,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip53
 )
-LaTeX Font Info:    Trying to load font information for OT1+xcmss on input line 23.
+LaTeX Font Info:    Trying to load font information for OT1+xcmss on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/ot1xcmss.fd
 File: ot1xcmss.fd 2021/06/22
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -331,40 +331,40 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./C0.aux)
 \openout1 = `C0.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmssm/m/it on input line 23.
-LaTeX Font Info:    Trying to load font information for OML+cmssm on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmssm/m/it on input line 25.
+LaTeX Font Info:    Trying to load font information for OML+cmssm on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/omlcmssm.fd
 File: omlcmssm.fd 2019/04/04
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsssy/m/n on input line 23.
-LaTeX Font Info:    Trying to load font information for OMS+cmsssy on input line 23.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsssy/m/n on input line 25.
+LaTeX Font Info:    Trying to load font information for OMS+cmsssy on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/omscmsssy.fd
 File: omscmsssy.fd 2019/04/04
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmssex/m/n on input line 23.
-LaTeX Font Info:    Trying to load font information for OMX+cmssex on input line 23.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmssex/m/n on input line 25.
+LaTeX Font Info:    Trying to load font information for OMX+cmssex on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/omxcmssex.fd
 File: omxcmssex.fd 2021/06/22
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/xcmss/m/n on input line 23.
-LaTeX Font Info:    Trying to load font information for U+xcmss on input line 23.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/xcmss/m/n on input line 25.
+LaTeX Font Info:    Trying to load font information for U+xcmss on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/uxcmss.fd
 File: uxcmss.fd 2021/06/22
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count288
@@ -418,126 +418,129 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 23.
+Package hyperref Info: Link coloring ON on input line 25.
 (./C0.out) (./C0.out)
 \@outlinefile=\write3
 \openout3 = `C0.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+cmsmf on input line 25.
+LaTeX Font Info:    Trying to load font information for OT1+cmsmf on input line 27.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/sansmathfonts/ot1cmsmf.fd
 File: ot1cmsmf.fd 2021/06/22
 )
 
 LaTeX Font Warning: Font shape `OT1/xcmss/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 29.
+(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 29.
+(hyperref)                removing `math shift' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 29.
+(hyperref)                removing `\cdot' on input line 31.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 29.
+(hyperref)                removing `math shift' on input line 31.
 
 
-Overfull \hbox (10.26907pt too wide) in alignment at lines 44--52
+Overfull \hbox (10.26907pt too wide) in alignment at lines 46--54
  [][][] []
  []
 
 
 LaTeX Font Warning: Font shape `OT1/xcmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 67.
+(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 69.
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (9.00375pt too wide) in paragraph at lines 94--96
+Overfull \hbox (9.00375pt too wide) in paragraph at lines 96--98
 \OT1/xcmss/m/n/10 Considering the or-thonor-mal-ity, we have $\OML/cmssm/m/it/10 b[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 R[] \OMS/cmsssy/m/n/10 ^^@ \OML/cmssm/m/it/10 R[]\OT1/cmsmf/m/n/10 ) = [](\OML/cmssm/m/it/10 ikR[]\OT1/cmsmf/m/n/10 )\OML/cmssm/m/it/10 b[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 R[]\OT1/cmsmf/m/n/10 )$\OT1/xcmss/m/n/10 , or $\OML/cmssm/m/it/10 b[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 R[]\OT1/cmsmf/m/n/10 ) = [](\OMS/cmsssy/m/n/10 ^^@\OML/cmssm/m/it/10 ikR[]\OT1/cmsmf/m/n/10 )\OML/cmssm/m/it/10 b[]\OT1/cmsmf/m/n/10 (0)$\OT1/xcmss/m/n/10 .
  []
 
 
-Overfull \hbox (10.71584pt too wide) in paragraph at lines 108--110
+Overfull \hbox (10.71584pt too wide) in paragraph at lines 110--112
 []\OT1/xcmss/m/n/10 where we de-fine ma-trix el-e-ments $\OML/cmssm/m/it/10 [] \OT1/cmsmf/m/n/10 = \OMS/cmsssy/m/n/10 ^^@ [] []\OML/cmssm/m/it/10 r'[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 r\OT1/cmsmf/m/n/10 )^^A\OML/cmssm/m/it/10 U'[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 r\OT1/cmsmf/m/n/10 )$\OT1/xcmss/m/n/10 , and $\OML/cmssm/m/it/10 ^^M[] \OT1/cmsmf/m/n/10 = \OMS/cmsssy/m/n/10 ^^@ [] []\OML/cmssm/m/it/10 r'[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 r \OMS/cmsssy/m/n/10 ^^@ \OML/cmssm/m/it/10 R[]\OT1/cmsmf/m/n/10 )^^A\OML/cmssm/m/it/10 U'[]\OT1/cmsmf/m/n/10 (\OML/cmssm/m/it/10 r\OT1/cmsmf/m/n/10 )$\OT1/xcmss/m/n/10 .
  []
 
 
 LaTeX Font Warning: Font shape `OT1/xcmss/b/n' in size <12> not available
-(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 112.
+(Font)              Font shape `OT1/xcmss/bx/n' tried instead on input line 114.
 
 LaTeX Font Info:    Font shape `OT1/xcmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/xcmss/m/sl' tried instead on input line 114.
+(Font)              Font shape `OT1/xcmss/m/sl' tried instead on input line 116.
 [2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
+(hyperref)                removing `math shift' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 153.
+(hyperref)                removing `math shift' on input line 155.
 
 [4]
-Overfull \hbox (20.84589pt too wide) in paragraph at lines 175--177
+Overfull \hbox (20.84589pt too wide) in paragraph at lines 177--179
 \OT1/xcmss/m/n/10 Note here $\OML/cmssm/m/it/10 N$ \OT1/xcmss/m/n/10 marks \OT1/xcmss/m/sl/10 the num-ber of avail-able $\OML/cmssm/m/it/10 k$ \OT1/xcmss/m/sl/10 states\OT1/xcmss/m/n/10 . De-fine the hop-ping en-ergy $\OML/cmssm/m/it/10 t[] \OT1/cmsmf/m/n/10 = [][]\OML/cmssm/m/it/10 "[] [] []$\OT1/xcmss/m/n/10 ,
  []
 
 [5]
-Overfull \hbox (11.36743pt too wide) in paragraph at lines 226--227
+Overfull \hbox (11.36743pt too wide) in paragraph at lines 228--229
 []\OT1/xcmss/m/n/10 Looking at this Hamil-to-nian, for each $\OML/cmssm/m/it/10 k$\OT1/xcmss/m/n/10 , we have four op-er-a-tors mix-ing to-gether, namely $\OML/cmssm/m/it/10 A[]; B[]; A[]; B[]$\OT1/xcmss/m/n/10 ,
  []
 
 [6]
-Overfull \hbox (22.7958pt too wide) in alignment at lines 236--236
+Overfull \hbox (22.7958pt too wide) in alignment at lines 238--238
  [][][] []
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 255.
+(hyperref)                removing `math shift' on input line 257.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cdot' on input line 255.
+(hyperref)                removing `\cdot' on input line 257.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 255.
+(hyperref)                removing `math shift' on input line 257.
 
 [7]
-Overfull \hbox (49.13884pt too wide) in alignment at lines 271--271
+Overfull \hbox (49.13884pt too wide) in alignment at lines 273--273
  [][][] []
  []
 
 [8] [9]
-Overfull \hbox (1.64334pt too wide) in alignment at lines 327--327
+Overfull \hbox (1.64334pt too wide) in alignment at lines 329--329
  [][][] []
  []
 
 [10]
-Overfull \hbox (23.42917pt too wide) detected at line 337
+Overfull \hbox (23.42917pt too wide) detected at line 341
 [][][]\OML/cmssm/m/it/10 E [] \OT1/cmsmf/m/n/10 = [] [] \OML/cmssm/m/it/10  []
  []
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 342.
 
 [11] (./C0.aux)
 Package rerunfilecheck Info: File `C0.out' has not changed.
 (rerunfilecheck)             Checksum: F926A629FE18DADF8D7E6F875A593DB3;2352.
  ) 
 Here is how much of TeX's memory you used:
- 11290 strings out of 476025
- 178487 string characters out of 5790016
+ 11294 strings out of 476025
+ 178534 string characters out of 5790016
  1883388 words of memory out of 5000000
- 31518 multiletter control sequences out of 15000+600000
+ 31519 multiletter control sequences out of 15000+600000
  523649 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,14n,76p,2796b,588s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmssmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/sansmathfonts/cmsssy7.pfb>
-Output written on C0.pdf (11 pages, 197545 bytes).
+Output written on C0.pdf (11 pages, 201583 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
